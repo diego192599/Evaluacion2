@@ -22,7 +22,7 @@ def conversion_Binario(n):
     if n == 0:
         return ""
     else:
-        return conversion_Binario(n // 2) + str(n % 2)
+        return conversion_Binario(n // 2)+ str(n%2)
 
 def numeros_digitos(n):
     if n < 10:
