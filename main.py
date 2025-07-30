@@ -1,8 +1,8 @@
-def MCD(n1,n2):
-    if n1/n2==0:
-        return 0
+def MCD(n1, n2):
+    if n2 == 0:
+        return n1
     else:
-        return MCD(n1%n2)
+        return MCD(n2, n1 % n2)
 def Repeticion(palabra,veces):
     if veces==0:
         return 0
@@ -38,6 +38,7 @@ while True:
         print("---Minimo comun divisor---")
         n1=int(input("Ingrese su primer numero (debe ser numero enteros positivos): "))
         n2=int(input("Ingrese el segundo numero (debe ser numero entero positivo): "))
+
     elif opcion==2:
         print("---Repeticion de palabras---")
         palabra=input("Ingrese la palabra que sea repetir: ")
@@ -52,3 +53,8 @@ while True:
     elif opcion==5:
         print("---Calcular digitos---")
         n=int(input("Ingrese un numero (entero positivo): "))
+    elif opcion==6:
+        print("!Hasta pronto¡")
+        break
+    else:
+        print("Opcion no valida vuelva a intentar")
