@@ -51,7 +51,7 @@ while True:
         print("---Repeticion de palabras---")
         palabra=input("Ingrese la palabra que sea repetir: ")
         veces=int(input("¿Cuantas veces se va a repetir la palabra? "))
-        resultado=Repeticion(palabra,veces)
+        resultado3=Repeticion(palabra,veces)
         print(f"La palabra: {palabra} se repetira un numero de veces {veces} ")
         print(f"El resultado es {resultado}")
 
@@ -75,7 +75,7 @@ while True:
         print(f"El numero {n} tiene un total de {resultado1} de numeros digitos")
 
     elif opcion==6:
-        print("!Hasta pronto¡")
+        print("¡Hasta pronto!")
         break
     else:
-        print("Opcion no valida vuelva a intentar")
+        print("Opcion no valida vuelva a intentar...De nuevo")
