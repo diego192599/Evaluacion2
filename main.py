@@ -54,6 +54,7 @@ while True:
         resultado=Repeticion(palabra,veces)
         print(f"La palabra: {palabra} se repetira un numero de veces {veces} ")
         print(f"El resultado es {resultado}")
+
     elif opcion==3:
         print("---Contar letras---")
         cadena=input("Ingrese la cadena: ")
