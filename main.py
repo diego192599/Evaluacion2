@@ -19,10 +19,10 @@ def contar_letras(cadena,letra):
         return contar_letras(cadena[1:],letra)
 
 def conversion_Binario(n):
-    if n/2==0:
-        return 0
+    if n == 0:
+        return ""
     else:
-
+        return conversion_Binario(n // 2) + str(n % 2)
 
 def numeros_digitos(n):
     if n < 10:
@@ -44,6 +44,8 @@ while True:
         print("---Minimo comun divisor---")
         n1=int(input("Ingrese su primer numero (debe ser numero enteros positivos): "))
         n2=int(input("Ingrese el segundo numero (debe ser numero entero positivo): "))
+        resultado= MCD(n1,n2)
+        print(f"EL minimo comun divisor de los numeros de {n1} y {n2} es: {resultado} ")
 
     elif opcion==2:
         print("---Repeticion de palabras---")
@@ -53,12 +55,18 @@ while True:
         print("---Contar letras---")
         cadena=input("Ingrese la cadena: ")
         letra=input("Ingrese la letra: ")
+        resultado=contar_letras(cadena,letra)
+        print(f"La palabra {cadena} tiene la cantidad de letra {letra} es: {resultado} ")
+
     elif opcion==4:
         print("---Convertir a Binario---")
         n=int(input("Ingrese un numero para convertir a binario: "))
+
     elif opcion==5:
         print("---Calcular digitos---")
         n=int(input("Ingrese un numero (entero positivo): "))
+        resultado1=numeros_digitos(n)
+        print(f"El numero {n} tiene un total de {resultado1} de numeros digitos")
 
     elif opcion==6:
         print("!Hasta pronto¡")
