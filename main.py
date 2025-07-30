@@ -4,11 +4,11 @@ def MCD(n1, n2):
     else:
         return MCD(n2, n1 % n2)
 
-def Repeticion(palabra,veces):
-    if veces==0:
-        return 0
+def Repeticion(palabra, veces):
+    if veces == 0:
+        return ""
     else:
-        return 1+Repeticion(palabra,veces)
+        return palabra + Repeticion(palabra, veces - 1)
 
 def contar_letras(cadena,letra):
     if cadena=="":
@@ -39,7 +39,7 @@ while True:
     print("4. Convertir a binario")
     print("5. Calcular digitos de un numero")
     print("6. Salir")
-    opcion=int(input("Seleccione una opcion"))
+    opcion=int(input("Seleccione una opcion: "))
     if opcion==1:
         print("---Minimo comun divisor---")
         n1=int(input("Ingrese su primer numero (debe ser numero enteros positivos): "))
@@ -51,6 +51,7 @@ while True:
         print("---Repeticion de palabras---")
         palabra=input("Ingrese la palabra que sea repetir: ")
         veces=int(input("Ingrese la veces que se repetira la palabra: "))
+
     elif opcion==3:
         print("---Contar letras---")
         cadena=input("Ingrese la cadena: ")
@@ -61,6 +62,8 @@ while True:
     elif opcion==4:
         print("---Convertir a Binario---")
         n=int(input("Ingrese un numero para convertir a binario: "))
+        resultado2=conversion_Binario(n)
+        print(f"El numero {n} su conversion a binario es {resultado2}")
 
     elif opcion==5:
         print("---Calcular digitos---")
