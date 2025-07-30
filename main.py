@@ -45,12 +45,12 @@ while True:
         n1=int(input("Ingrese su primer numero (debe ser numero enteros positivos): "))
         n2=int(input("Ingrese el segundo numero (debe ser numero entero positivo): "))
         resultado= MCD(n1,n2)
-        print(f"EL minimo comun divisor de los numeros de {n1} y {n2} es: {resultado} ")
+        print(f"EL Maximo Común Divisor de los numeros de {n1} y {n2} es: {resultado} ")
 
     elif opcion==2:
         print("---Repeticion de palabras---")
         palabra=input("Ingrese la palabra que sea repetir: ")
-        veces=int(input("Ingrese la veces que se repetira la palabra: "))
+        veces=int(input("¿Cuantas veces se va a repetir la palabra? "))
         resultado=Repeticion(palabra,veces)
         print(f"La palabra: {palabra} se repetira un numero de veces {veces} ")
         print(f"El resultado es {resultado}")
