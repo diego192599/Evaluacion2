@@ -3,16 +3,20 @@ def MCD(n1, n2):
         return n1
     else:
         return MCD(n2, n1 % n2)
+
 def Repeticion(palabra,veces):
     if veces==0:
         return 0
     else:
         return 1+Repeticion(palabra,veces)
+
 def contar_letras(cadena,letra):
-    if letra=="":
+    if cadena=="":
         return 0
+    if cadena[0]==letra:
+        return 1+contar_letras(cadena[1:],letra)
     else:
-        return
+        return contar_letras(cadena[1:],letra)
 
 def conversion_Binario(n):
     if n/2==0:
@@ -55,6 +59,7 @@ while True:
     elif opcion==5:
         print("---Calcular digitos---")
         n=int(input("Ingrese un numero (entero positivo): "))
+
     elif opcion==6:
         print("!Hasta pronto¡")
         break
