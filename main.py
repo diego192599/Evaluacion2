@@ -19,11 +19,13 @@ def conversion_Binario(n):
         return 0
     else:
 
+
 def numeros_digitos(n):
-    if n==0:
-        return 0
+    if n < 10:
+        return 1
     else:
-        return 1+numeros_digitos(n-1)
+        return 1 + numeros_digitos(n // 10)
+
 
 while True:
     print("==Menu==")
